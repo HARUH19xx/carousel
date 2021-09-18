@@ -1,0 +1,91 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px;
+    height: 600px;
+    border: 5px solid black;
+    border-radius: 10px;
+    .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 750px;
+          height: fit-content;
+          border-radius: 10px;
+        }
+        .pictures {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          width: 100%;
+          height: 450px;
+        }
+        .picture {
+          transition: 0.7s cubic-bezier(0.50, 0.0, 0.30, 1.0);
+          &:nth-child(1) {
+            position: relative;
+            left: -100%;
+          }
+          &:nth-child(2) {
+            position: relative;
+            left: 0%;
+          }
+          &:nth-child(3) {
+            position: relative;
+            left: 100%;
+          }
+        }
+    }
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  i {
+      font-size: 40px;
+  }
+  span {
+      display: block;
+      background-color: gray;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0px 8px;
+  }
+  .active {
+      background-color: red;
+  }
+  .btns {
+      cursor: pointer;
+  }
+  .indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: blue;
+      width: 100px;
+      height: 20px;
+      border-radius: 10px;
+  }
+}
