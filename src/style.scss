@@ -38,7 +38,7 @@ main {
           height: 450px;
         }
         .picture {
-          transition: 0.7s cubic-bezier(0.50, 0.0, 0.30, 1.0);
+          transition: 0.4s cubic-bezier(0.50, 0.0, 0.30, 1.0);
           &:nth-child(1) {
             position: relative;
             left: -100%;

@@ -31,4 +31,8 @@ for (let i = 0; i < btn.length; i++) {
             }, 0)
         }
     })
+    setTimeout(() => {
+        firstItem.parentNode.insertBefore(lastItem, firstItem)
+        firstIndicator.parentNode.insertBefore(firstIndicator, lastIndicator.nextSibling)
+    }, 4*1000)
 }
