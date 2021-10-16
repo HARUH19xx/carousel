@@ -9820,12 +9820,11 @@ __webpack_require__.r(__webpack_exports__);
 const btn = document.querySelectorAll('.btns')
 const preBtn = document.querySelector('.prev-btn')
 const nextBtn = document.querySelector('.next-btn')
+const picture = document.querySelector('.pictures').children
+const indicator = document.querySelector('.indicators').children
 
 for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener('click', () => {
-        const picture = document.querySelector('.pictures').children
-        const indicator = document.querySelector('.indicators').children
-
         const lastPictureIndex = picture.length -1
         const firstPictureIndex = 0
         const lastIndicatorIndex = indicator.length -1
@@ -9848,10 +9847,6 @@ for (let i = 0; i < btn.length; i++) {
             }, 0)
         }
     })
-    setTimeout(() => {
-        firstItem.parentNode.insertBefore(lastItem, firstItem)
-        firstIndicator.parentNode.insertBefore(firstIndicator, lastIndicator.nextSibling)
-    }, 4*1000)
 }
 })();
 
